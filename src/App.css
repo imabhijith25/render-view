@@ -1,0 +1,107 @@
+:root {
+    /* Spacing System */
+    --space-xxs: 4px;
+    /* Extra Extra Small */
+    --space-xs: 8px;
+    /* Extra Small */
+    --space-sm: 16px;
+    /* Small */
+    --space-md: 24px;
+    /* Medium */
+    --space-lg: 32px;
+    /* Large */
+    --space-xl: 48px;
+    /* Extra Large */
+    --space-xxl: 64px;
+    /* Extra Extra Large */
+    --font-size-base: 16px;
+
+    /* Font size scale (using a ratio of 1.25) */
+    --font-size-xxs: calc(var(--font-size-base) * 0.625);
+    /* 10px */
+    --font-size-xs: calc(var(--font-size-base) * 0.75);
+    /* 12px */
+    --font-size-sm: calc(var(--font-size-base) * 0.875);
+    /* 14px */
+    --font-size-md: var(--font-size-base);
+    /* 16px */
+    --font-size-lg: calc(var(--font-size-base) * 1.25);
+    /* 20px */
+    --font-size-xl: calc(var(--font-size-base) * 1.5);
+    /* 24px */
+    --font-size-xxl: calc(var(--font-size-base) * 2);
+    /* 32px */
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #2E2B2B;
+    color: #e7e7e7;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Source Sans 3", sans-serif;
+    ;
+    font-variant: small-caps;
+
+}
+
+p {
+    font-family: "Source Sans 3", sans-serif;
+
+}
+
+button {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+hr {
+    margin: var(--space-sm) 0;
+    border-color: #797979;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px 10px 5px;
+}
+
+.container {
+    flex-basis: 800px;
+}
+
+.tab {
+    padding: var(--space-xs);
+    border-radius: var(--space-xs);
+    font-weight: var(--font-weight-semibold);
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-selected {
+    background: white;
+    color: black
+}
+
+/* .templateChoserContainer {
+    flex-basis: 1200px;
+} */

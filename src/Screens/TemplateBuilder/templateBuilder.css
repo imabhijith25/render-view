@@ -1,0 +1,121 @@
+.tb-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.tb-visualizer {
+    flex-basis: 75%;
+    background-color: #262424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.para-normal-head {
+    font-weight: var(--font-weight-black);
+    font-size: var(--font-size-sm);
+    padding-bottom: var(--space-sm);
+}
+
+.tb-propertyBar {
+    flex-basis: 25%;
+    padding: var(--space-sm);
+    position: relative;
+}
+
+.element-text {
+    cursor: pointer;
+}
+
+.tab-container {
+    margin: var(--space-xs) 0 var(--space-sm) 0;
+}
+
+.large_heading {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-black);
+}
+
+.normal_paragraph {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+}
+
+.elements-shape-container {
+    display: flex;
+    column-gap: var(--space-md);
+    margin-bottom: var(--space-md);
+
+}
+
+.elements-shape {
+    background-color: #4b4949;
+    padding: var(--space-sm);
+    border-radius: var(--space-xs);
+    cursor: pointer;
+}
+
+.elements-shape:hover {
+    background-color: #323131;
+}
+
+.property-name {
+    font-weight: var(--font-weight-medium);
+}
+
+.property-group {
+    margin: var(--space-xs) 0;
+    display: flex;
+    column-gap: var(--space-xs);
+}
+
+.property-input-text-area {
+    width: 150px;
+    padding: var(--space-xxs);
+    background-color: #262424;
+    border: 1px solid white;
+    color: white;
+    border-radius: var(--space-xs);
+
+}
+
+.property-input {
+    width: 50px;
+    padding: var(--space-xxs);
+    background-color: #262424;
+    border: 1px solid white;
+    color: white;
+    border-radius: var(--space-xs);
+
+}
+
+.movement-container {
+    margin: var(--space-sm) 0;
+    display: flex;
+    column-gap: var(--space-xs);
+}
+
+.chips {
+    border-radius: var(--space-xxs);
+    padding: var(--space-xs);
+    margin: var(--space-xxs);
+    border: 2px solid white;
+    color: white;
+    background-color: #262424;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+}
+
+.chips-selected {
+    color: black;
+    background-color: white;
+}
+
+.play-button {
+    display: flex;
+    align-items: center;
+    column-gap: var(--space-xxs);
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px
+}
