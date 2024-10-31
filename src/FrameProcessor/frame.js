@@ -32,8 +32,8 @@ export class Frame {
             const image = new Image();
             image.onload = () => {
                 this.background = new Konva.Image({
-                    x: -2500,
-                    y: -3800,
+                    x: 0,
+                    y: 0,
                     // height: this.frame.height(),
                     // width: this.frame.width(),
                     image,
@@ -47,6 +47,7 @@ export class Frame {
         } else {
             var video = document.createElement("video");
             video.src = "./sample.mp4";
+            video.muted = true;
             this.videoBackground = new Konva.Image({
                 x: 0,
                 y: 0,

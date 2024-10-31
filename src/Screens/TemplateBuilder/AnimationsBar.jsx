@@ -32,11 +32,11 @@ const AnimationsBar = ({ currentShape, multiSelected, dispatch, state }) => {
         }
     }, [currentShape]);
 
-    useEffect(() => {
-        if (state.mode == "animation") {
-            assignAnimations(state);
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     if (state.mode == "animation") {
+    //         assignAnimations(state);
+    //     }
+    // }, [state]);
 
     return (
         <>

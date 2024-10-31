@@ -30,8 +30,8 @@ const Scene = ({
             addObjects(frame, objectsList);
         }
 
-        if (play) {
-            assignAnimations(frame, animations);
+        if (mode == "animation") {
+            assignAnimations({ animations });
         }
     }, [frameData, objectsList, animations, animationObjectsList]); //these dependencies should be in a separate useeffect made only to update
 

@@ -55,12 +55,12 @@ const TemplateBuilder = () => {
             }
         });
     }, []);
-    useEffect(() => {
-        console.log(state);
-        if (state.mode == "animation") {
-            assignAnimations(state);
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     console.log(state);
+    //     if (state.mode == "animation") {
+    //         assignAnimations(state);
+    //     }
+    // }, [state]);
 
     const injectAndPlay = () => {
         const animations = {

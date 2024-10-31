@@ -7,8 +7,8 @@ const App = () => {
     return (
         <>
             {/* <TrimAndManipulator /> */}
-            {/* <TemplateChoser /> */}
-            <TemplateBuilder />
+            <TemplateChoser />
+            {/* <TemplateBuilder /> */}
         </>
     );
 };
