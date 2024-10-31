@@ -12,6 +12,7 @@ export const PrimitiveText = (
         x,
         y,
         text: textContent,
+        width: "300",
         fontSize,
         fontFamily: "Source Sans 3",
         fontStyle,

@@ -117,9 +117,9 @@ const TemplateBuilder = () => {
     return (
         <div className="tb-layout">
             <div className="tb-visualizer">
-                <button onClick={injectAndPlay}>
+                {/* <button onClick={injectAndPlay}>
                     Inject Data and Play Animation
-                </button>
+                </button> */}
                 <Scene {...state} />
             </div>
             <div className="tb-propertyBar">
