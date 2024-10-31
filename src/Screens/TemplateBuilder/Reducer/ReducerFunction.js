@@ -51,7 +51,7 @@ export function reducer(state, action) {
                     ...state.animations,
                     [action.data.key]: action.data.value,
                 },
-                state
+                state.objectsList
             );
             return {
                 ...state,
@@ -63,9 +63,22 @@ export function reducer(state, action) {
                 },
             };
 
+        case "inject_and_update_and_play":
+            const animationst = action.data.animations;
+            const objlisttwo = action.data.objectsList;
+            const animListTwo = setAnimationObjectsList(
+                animationst,
+                objlisttwo
+            );
+            return {
+                ...state,
+                animationObjectsList: animListTwo,
+                mode: "animation",
+                objectsList: objlisttwo,
+                animations: animationst,
+            };
+
         case "update_animations_list":
-            console.log("gonger");
-            console.log(action.data);
             let uniqueArr = [...new Set(action.data.map(JSON.stringify))].map(
                 JSON.parse
             );

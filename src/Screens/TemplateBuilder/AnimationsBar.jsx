@@ -79,6 +79,14 @@ const AnimationsBar = ({ currentShape, multiSelected, dispatch, state }) => {
                 />
                 Play Template
             </div>
+            <button
+                onClick={() => {
+                    console.log(state);
+                }}
+            >
+                {" "}
+                View State
+            </button>
         </>
     );
 };

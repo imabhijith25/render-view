@@ -5,6 +5,7 @@ import Scene from "../../Components/Scene/Scene";
 import { imageScene, reducer } from "./Reducer/ReducerFunction";
 import PropertyBar from "./PropertyBar";
 import AnimationsBar from "./AnimationsBar";
+import { assignAnimations } from "../../FrameProcessor/assignAnimations";
 const TemplateBuilder = () => {
     const [state, dispatch] = useReducer(reducer, imageScene);
     const [currentTab, setCurrentTab] = useState("properties");
@@ -54,10 +55,71 @@ const TemplateBuilder = () => {
             }
         });
     }, []);
+    useEffect(() => {
+        console.log(state);
+        if (state.mode == "animation") {
+            assignAnimations(state);
+        }
+    }, [state]);
+
+    const injectAndPlay = () => {
+        const animations = {
+            "097c9650-8f34-4670-bd2c-eaefc6ba6671603": {
+                name: "Fade In",
+                on: "097c9650-8f34-4670-bd2c-eaefc6ba6671603",
+                uid: "097c9650-8f34-4670-bd2c-eaefc6ba6671603",
+                duration: 2,
+                key: "fade_in",
+                initialData: {
+                    opacity: 0,
+                },
+                toData: {
+                    opacity: 1,
+                },
+            },
+        };
+
+        const objectsList = [
+            {
+                uid: "097c9650-8f34-4670-bd2c-eaefc6ba6671603",
+                type: "rectangle",
+                x: 120,
+                y: 50,
+                width: 50,
+                stroke: "#fefefe",
+                strokeWidth: 4,
+                height: 50,
+                fill: "#472296",
+                draggable: true,
+                rotation: 0,
+                scaleX: 1,
+                scaleY: 1,
+                offsetX: 0,
+                offsetY: 0,
+                skewX: 0,
+                skewY: 0,
+                opacity: 1,
+            },
+        ];
+
+        //update animations,
+        //update objectsList,
+        //call update_animatiosn reducer function
+        dispatch({
+            type: "inject_and_update_and_play",
+            data: {
+                animations,
+                objectsList,
+            },
+        });
+    };
 
     return (
         <div className="tb-layout">
             <div className="tb-visualizer">
+                <button onClick={injectAndPlay}>
+                    Inject Data and Play Animation
+                </button>
                 <Scene {...state} />
             </div>
             <div className="tb-propertyBar">

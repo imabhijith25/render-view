@@ -3,8 +3,7 @@ import { imageScene } from "../Screens/TemplateBuilder/Reducer/ReducerFunction";
 import { AnimationsList } from "../Utils/AnimationsList";
 import { generateAndDispatchCustomEvent } from "../Utils/util";
 
-export const setAnimationObjectsList = (animations, state) => {
-    const objectsList = state.objectsList;
+export const setAnimationObjectsList = (animations, objectsList) => {
     const finalList = [];
     for (let objects = 0; objects < objectsList.length; objects++) {
         console.log("first loop");
