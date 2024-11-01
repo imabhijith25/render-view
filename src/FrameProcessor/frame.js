@@ -27,21 +27,21 @@ export class Frame {
                 width: this.frame.width(),
                 fill: frameData.fill,
             });
-            this.backgroundLayer.add(this.background);
+            this.layer.add(this.background);
         } else if (frameData.type == "image") {
             const image = new Image();
             image.onload = () => {
                 this.background = new Konva.Image({
                     x: 0,
                     y: 0,
-                    // height: this.frame.height(),
-                    // width: this.frame.width(),
+
+                    height: this.frame.height(),
+                    width: this.frame.width(),
                     image,
                 });
-                this.backgroundLayer.add(this.background);
-                if (play) {
-                    assignBackgroudAnimations(this.background);
-                }
+
+                this.layer.add(this.background);
+                this.background.moveToBottom();
             };
             image.src = "./image.jpg";
         } else {
