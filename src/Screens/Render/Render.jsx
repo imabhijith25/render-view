@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Scene from "../../Components/Scene/Scene";
 import "../TemplateBuilder/templateBuilder.css";
+import { useSearchParams } from "react-router-dom";
 const temp = {
     frameData: {
         type: "image",
@@ -131,7 +132,7 @@ const Render = () => {
     let ctx;
     let ctxbg;
     const [sceneData, setSceneData] = useState(null);
-
+    let [searchParams, setSearchParams] = useSearchParams();
     const generateVideoCapture = () => {
         console.log(document.getElementsByTagName("canvas"));
         canvas = document.getElementsByTagName("canvas")[1];
@@ -152,10 +153,16 @@ const Render = () => {
     };
 
     useEffect(() => {
+        //call this from api
+        console.log(searchParams);
         setSceneData({ ...temp, mode: "animation" });
     }, []);
     useEffect(() => {
-        if (sceneData && sceneData.mode == "animation") {
+        if (
+            sceneData &&
+            sceneData.mode == "animation" &&
+            searchParams.get("play")
+        ) {
             recordDemo();
             generateVideoCapture();
         }
