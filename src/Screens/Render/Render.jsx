@@ -22,9 +22,6 @@ const temp = {
             width: 300,
             padding: 20,
             align: "center",
-            shadowBlur: 10, // Set the shadow blur radius
-            shadowOffsetX: 5, // Set the shadow horizontal offset
-            shadowOffsetY: 5, // Set the shadow vertical offset
         },
         {
             uid: "f2",
@@ -61,9 +58,6 @@ const temp = {
             width: 300,
             padding: 20,
             align: "center",
-            shadowBlur: 10, // Set the shadow blur radius
-            shadowOffsetX: 5, // Set the shadow horizontal offset
-            shadowOffsetY: 5, // Set the shadow vertical offset
         },
         {
             uid: "f2",
@@ -155,6 +149,7 @@ const Render = () => {
     useEffect(() => {
         //call this from api
         console.log(searchParams);
+
         setSceneData({ ...temp, mode: "animation" });
     }, []);
     useEffect(() => {
@@ -196,13 +191,6 @@ const Render = () => {
         div.appendChild(a);
         a.click();
     };
-
-    // useEffect(() => {
-    //     if (sceneData.mode == "animation") {
-    //         //start animation
-    //         recordDemo();
-    //     }
-    // }, [sceneData]);
 
     return (
         <div className="tb-layout">
