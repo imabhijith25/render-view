@@ -34,7 +34,7 @@ const Scene = ({
         if (mode == "animation") {
             assignAnimations({ animations });
         }
-    }, [frameData, objectsList, animations, animationObjectsList, mode]); //these dependencies should be in a separate useeffect made only to update
+    }, [frameData, objectsList, animations, animationObjectsList]); //these dependencies should be in a separate useeffect made only to update
 
     if (frameData.type == "video") {
         return (

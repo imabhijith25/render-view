@@ -27,7 +27,7 @@ export class Frame {
                 width: this.frame.width(),
                 fill: frameData.fill,
             });
-            this.layer.add(this.background);
+            this.backgroundLayer.add(this.background);
         } else if (frameData.type == "image") {
             const image = new Image();
             image.onload = () => {
@@ -40,8 +40,7 @@ export class Frame {
                     image,
                 });
 
-                this.layer.add(this.background);
-                this.background.moveToBottom();
+                this.backgroundLayer.add(this.background);
             };
             image.src = "./image.jpg";
         } else {
